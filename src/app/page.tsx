@@ -58,7 +58,7 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <Briefcase className="size-4" />
-              <p>Research Intern at RDCIS SAIL, Ranchi</p>
+              <p>Research Intern at RDCIS SAIL, Ranchi (May 2025 - June 2025)</p>
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <Terminal className="size-4" />
