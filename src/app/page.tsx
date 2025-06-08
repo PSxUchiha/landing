@@ -3,7 +3,7 @@ import Container from "@/components/container";
 import { Metadata } from "next";
 import { Hero } from "@/components/hero";
 import type { WebPage, WithContext } from "schema-dts";
-import { Book, Code, GitGraph, Info, User, School, Terminal, Mail } from "lucide-react";
+import { Code, GitGraph, Info, User, School, Terminal, Mail } from "lucide-react";
 import { TextScroll } from "@/components/ui/text-scroll";
 import { TechStack } from "@/components/tech-stack";
 import { ProjectShowcase } from "@/components/project-showcase";
@@ -12,10 +12,10 @@ import HeroImage from "@/assets/img/hero.jpg";
 import HeroProfile from "@/assets/img/profpic-animated.webp";
 
 export const metadata: Metadata = {
-  title: "Landing | realm.",
+  title: "Landing | landing.",
   description: "Where it all begins.",
   openGraph: {
-    title: "Landing | realm.",
+    title: "Landing | landing.",
     description: "Where it all begins.",
   },
 };
@@ -25,7 +25,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "Priyanshu Sharma",
-    alternateName: "realm.",
+    alternateName: "landing.",
     mainEntityOfPage: "https://priyanshusharma.dev/",
     description: "Where it all begins.",
     url: "https://priyanshusharma.dev/",
