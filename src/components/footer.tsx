@@ -1,11 +1,15 @@
-import { RealmMoe } from "./realm-moe";
+import { cn } from "@/lib/utils";
 
-export function Footer() {
+export function Footer({ className }: { className?: string }) {
   return (
-    <footer className="w-full max-w-3xl mb-30 md:mb-0 mx-auto p-5 gap-8 flex flex-col justify-center items-center">
-      <RealmMoe className="md:h-64 hover:scale-120 transition-all" />
-      <p className="text-primary/75 text-sm text-center w-full">
-        &copy; 2025 Irvan Malik Azantha. Licensed in RCCL.
+    <footer
+      className={cn(
+        "flex flex-col items-center justify-center gap-3 py-3",
+        className,
+      )}
+    >
+      <p className="text-center text-sm text-muted-foreground">
+        Built with ❤️ by Priyanshu Sharma
       </p>
     </footer>
   );

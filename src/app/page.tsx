@@ -1,14 +1,15 @@
+import React from 'react';
 import Container from "@/components/container";
 import { Metadata } from "next";
 import { Hero } from "@/components/hero";
 import type { WebPage, WithContext } from "schema-dts";
+import { Book, Code, GitGraph, Info, User, School, Terminal, Mail } from "lucide-react";
+import { TextScroll } from "@/components/ui/text-scroll";
+import { TechStack } from "@/components/tech-stack";
+import { ProjectShowcase } from "@/components/project-showcase";
 
 import HeroImage from "@/assets/img/hero.jpg";
 import HeroProfile from "@/assets/img/profpic-animated.webp";
-import { Book, Info, Pickaxe, Server } from "lucide-react";
-import { MinecraftServer } from "@/components/minecraft";
-import { SelfHostedServices } from "@/components/selfhosted";
-import { TextScroll } from "@/components/ui/text-scroll";
 
 export const metadata: Metadata = {
   title: "Landing | realm.",
@@ -23,11 +24,11 @@ export default function Home() {
   const jsonLd: WithContext<WebPage> = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Irvan Malik Azantha",
+    name: "Priyanshu Sharma",
     alternateName: "realm.",
-    mainEntityOfPage: "https://irvanma.eu.org/",
+    mainEntityOfPage: "https://priyanshusharma.dev/",
     description: "Where it all begins.",
-    url: "https://irvanma.eu.org/",
+    url: "https://priyanshusharma.dev/",
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -35,26 +36,8 @@ export default function Home() {
           "@type": "ListItem",
           position: 1,
           name: "Landing",
-          item: "https://irvanma.eu.org/",
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "About",
-          item: "https://irvanma.eu.org/about",
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: "Server Status",
-          item: "https://irvanma.eu.org/status",
-        },
-        {
-          "@type": "ListItem",
-          position: 4,
-          name: "Blog",
-          item: "https://irvanma.eu.org/blog",
-        },
+          item: "https://priyanshusharma.dev/",
+        }
       ],
     },
   };
@@ -65,37 +48,41 @@ export default function Home() {
         <Hero img={HeroImage} profile={HeroProfile} />
         <div className="w-full bg-background rounded-lg border border-border">
           <h2 className="w-full flex items-center gap-3 text-muted-foreground px-5 py-3 border-b border-border">
-            <Book className="size-4" />
-            <span className="text-sm font-mono">DESCRIPTION.md</span>
+            <User className="size-4" />
+            <span className="text-sm font-mono">ABOUT-ME.md</span>
           </h2>
-          <p className="px-5 py-3">
-            I ain&apos;t tryna be fancy here. I don&apos;t know what to put so I
-            will just say welcome to my personal site. I&apos;m Irvan Malik
-            Azantha. Domicile is Palembang, Indonesia. Age 22. For job
-            inquiries, please contact me through my work mail.
-          </p>
+          <div className="px-5 py-3 space-y-2">
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <School className="size-4" />
+              <p>B.Tech student in Electronics and Communication at MIT Manipal (2027)</p>
+            </div>
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Terminal className="size-4" />
+              <p>Passionate about development and collaboration</p>
+            </div>
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Mail className="size-4" />
+              <p>For inquiries, please reach out via <a href="mailto:priyanshusharma1803@outlook.com" className="underline underline-offset-2">email</a></p>
+            </div>
+          </div>
         </div>
+
         <div className="w-full bg-background rounded-lg border border-border">
           <h2 className="w-full flex items-center gap-3 text-muted-foreground px-5 py-3 border-b border-border">
-            <Pickaxe className="size-4" />
-            <span className="text-sm font-mono">MINECRAFT_SERVER.md</span>
+            <Code className="size-4" />
+            <span className="text-sm font-mono">TECH_STACK.md</span>
           </h2>
-          <p className="px-5 py-3 border-b border-border">
-            Oh yeah, I run a Minecraft Server. Here&apos;s the details:
-          </p>
-          <MinecraftServer />
+          <TechStack />
         </div>
+
         <div className="w-full bg-background rounded-lg border border-border">
           <h2 className="w-full flex items-center gap-3 text-muted-foreground px-5 py-3 border-b border-border">
-            <Server className="size-4" />
-            <span className="text-sm font-mono">SELFHOSTED.md</span>
+            <GitGraph className="size-4" />
+            <span className="text-sm font-mono">PROJECTS.md</span>
           </h2>
-          <p className="px-5 py-3 border-b border-border">
-            There are some services that I self-host. It would grow overtime but
-            here are the current services that I self-host:
-          </p>
-          <SelfHostedServices />
+          <ProjectShowcase />
         </div>
+
         <div className="w-full bg-background rounded-lg border border-border">
           <h2 className="w-full flex items-center gap-3 text-muted-foreground px-5 py-3 border-b border-border">
             <Info className="size-4" />
@@ -138,18 +125,9 @@ export default function Home() {
             >
               Tanstack Query
             </a>
-            . It is hosted on{" "}
-            <a
-              href="https://vercel.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-2"
-            >
-              Vercel
-            </a>
             . The source code is available on{" "}
             <a
-              href="https://github.com/irvanmalik48/realm"
+              href="https://github.com/PSxUchiha/landing"
               target="_blank"
               rel="noopener noreferrer"
               className="underline underline-offset-2"
@@ -164,7 +142,7 @@ export default function Home() {
         className="text-5xl md:text-7xl text-muted-foreground/50 dark:font-semibold font-bold py-24 md:space-y-2"
         textClassName="py-1 md:py-3 font-doto"
         default_velocity={0.66}
-        text="I WILL NOT CRASH YOUR BROWSER.  "
+        text="Hard work is worthless for those that don't believe in themselves.  "
       />
       <script
         type="application/ld+json"

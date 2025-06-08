@@ -6,8 +6,8 @@ import { Navbar } from "@/components/navbar";
 import Providers from "@/lib/provider/react-query";
 
 import "./globals.css";
+import "./fonts.css";
 import { Footer } from "@/components/footer";
-import { FAB } from "@/components/fab";
 
 import OgImage from "./opengraph-image.png";
 
@@ -28,19 +28,19 @@ const doto = Doto({
 
 export const metadata: Metadata = {
   title: {
-    default: "realm.",
-    template: "%s | realm.",
+    default: "psxuchiha.",
+    template: "%s | psxuchiha.",
   },
-  description: "Stuffs I put.",
+  description: "Where it all begins.",
   metadataBase: new URL(
     process.env.NODE_ENV === "production"
-      ? "https://irvanma.eu.org"
+      ? "https://priyanshusharma.dev"
       : "http://localhost:3000",
   ),
   openGraph: {
     title: {
-      default: "realm.",
-      template: "%s | realm.",
+      default: "psxuchiha.",
+      template: "%s | psxuchiha.",
     },
     images: [
       {
@@ -49,14 +49,14 @@ export const metadata: Metadata = {
         height: OgImage.height,
       },
     ],
-    description: "Stuffs I put.",
+    description: "Where it all begins.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@irvanmalik48",
-    creator: "@irvanmalik48",
+    site: "@PSxUchiha",
+    creator: "@PSxUchiha",
     images: [
       {
         url: OgImage.src,
@@ -89,9 +89,8 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} ${doto.variable} antialiased scroll-smooth`}
         >
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
             <Providers>
-              <FAB />
               <Navbar />
               {children}
               <Footer />

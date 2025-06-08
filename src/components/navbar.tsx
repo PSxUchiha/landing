@@ -26,13 +26,13 @@ export function Navbar() {
   const links: FlatNavLinkData[] = [];
 
   return (
-    <header className="sticky top-0 z-50 bg-background/50 backdrop-blur-lg w-full">
+    <header className="sticky top-0 z-50 bg-background/50 backdrop-blur-sm w-full">
       <nav className="w-full max-w-3xl mx-auto px-5 py-3 flex justify-between items-center">
         <Link
           href="/"
           className="text-xl font-bold dark:font-medium text-primary"
         >
-          realm.
+          psxuchiha.
         </Link>
         <div className="flex gap-5 items-center">
           {links.length > 0 &&
