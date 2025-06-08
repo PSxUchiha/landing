@@ -3,7 +3,7 @@ import Container from "@/components/container";
 import { Metadata } from "next";
 import { Hero } from "@/components/hero";
 import type { WebPage, WithContext } from "schema-dts";
-import { Code, GitGraph, Info, User, School, Terminal, Mail } from "lucide-react";
+import { Code, GitGraph, Info, User, School, Terminal, Mail, Briefcase } from "lucide-react";
 import { TextScroll } from "@/components/ui/text-scroll";
 import { TechStack } from "@/components/tech-stack";
 import { ProjectShowcase } from "@/components/project-showcase";
@@ -55,6 +55,10 @@ export default function Home() {
             <div className="flex items-center gap-2 text-muted-foreground">
               <School className="size-4" />
               <p>B.Tech student in Electronics and Communication at MIT Manipal (2027)</p>
+            </div>
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Briefcase className="size-4" />
+              <p>Research Intern at RDCIS SAIL, Ranchi</p>
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <Terminal className="size-4" />
