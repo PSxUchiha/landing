@@ -17,19 +17,27 @@ export function ProjectShowcase() {
       icon: '󰉋',
       color: 'var(--teal)',
     },
+    {
+      name: 'YatraGPT',
+      description: 'An AI powered personalised travel agent that won 2nd prize in finova SoftLaunch Hackathon 2025.',
+      url: 'https://github.com/vee1e/finova',
+      icon: '󰒋',
+      color: 'var(--blue)',
+    },
+    {
+      name: 'More to come',
+      description: 'Exciting projects in development. Stay tuned for more innovative solutions and collaborations.',
+      url: 'https://github.com/PSxUchiha',
+      icon: '󰐊',
+      color: 'var(--green)',
+    },
   ];
 
   return (
     <div className="space-y-4 px-5 py-3">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {projects.map((project) => (
-          <a
-            key={project.name}
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block"
-          >
+        {projects.map((project) => {
+          const content = (
             <div className="relative h-full p-4 rounded-lg border border-border transition-all duration-300">
               <div 
                 className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg"
@@ -50,17 +58,39 @@ export function ProjectShowcase() {
                     {project.name}
                   </h3>
                 </div>
-                <Github 
-                  className="size-4 opacity-50 group-hover:opacity-100 transition-all duration-300" 
-                  style={{ color: project.color }}
-                />
+                {project.url && (
+                  <Github 
+                    className="size-4 opacity-50 group-hover:opacity-100 transition-all duration-300" 
+                    style={{ color: project.color }}
+                  />
+                )}
               </div>
               <p className="relative text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
                 {project.description}
               </p>
             </div>
-          </a>
-        ))}
+          );
+
+          if (project.url) {
+            return (
+              <a
+                key={project.name}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
+              >
+                {content}
+              </a>
+            );
+          } else {
+            return (
+              <div key={project.name} className="group block">
+                {content}
+              </div>
+            );
+          }
+        })}
       </div>
     </div>
   );

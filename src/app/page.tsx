@@ -12,10 +12,10 @@ import HeroImage from "@/assets/img/hero.jpg";
 import HeroProfile from "@/assets/img/profpic-animated.webp";
 
 export const metadata: Metadata = {
-  title: "Landing | landing.",
+  title: "Landing | psxuchiha.",
   description: "Where it all begins.",
   openGraph: {
-    title: "Landing | landing.",
+    title: "Landing | psxuchiha.",
     description: "Where it all begins.",
   },
 };
