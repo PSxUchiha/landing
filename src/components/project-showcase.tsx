@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { Github } from 'lucide-react';
 
@@ -7,13 +9,15 @@ export function ProjectShowcase() {
       name: 'Shell Assistant',
       description: 'A local application that interprets natural language commands and executes them on a Linux system using Ollama LLM.',
       url: 'https://github.com/PSxUchiha/shell-assistant',
+      githubUrl: 'https://github.com/PSxUchiha/shell-assistant',
       icon: '󰆍',
       color: 'var(--mauve)',
     },
     {
       name: 'Gate Entry',
       description: 'A modern gate entry management system built with Next.js 14, featuring role-based access control and visitor tracking.',
-      url: 'https://github.com/PSxUchiha/gate-entry',
+      url: 'https://gate-entry-sigma.vercel.app/',
+      githubUrl: 'https://github.com/PSxUchiha/gate-entry',
       icon: '󰉋',
       color: 'var(--teal)',
     },
@@ -21,6 +25,7 @@ export function ProjectShowcase() {
       name: 'YatraGPT',
       description: 'An AI powered personalised travel agent that won 2nd prize in finova SoftLaunch Hackathon 2025.',
       url: 'https://github.com/vee1e/finova',
+      githubUrl: 'https://github.com/vee1e/finova',
       icon: '󰒋',
       color: 'var(--blue)',
     },
@@ -28,6 +33,7 @@ export function ProjectShowcase() {
       name: 'More to come',
       description: 'Exciting projects in development. Stay tuned for more innovative solutions and collaborations.',
       url: 'https://github.com/PSxUchiha',
+      githubUrl: 'https://github.com/PSxUchiha',
       icon: '󰐊',
       color: 'var(--green)',
     },
@@ -58,11 +64,19 @@ export function ProjectShowcase() {
                     {project.name}
                   </h3>
                 </div>
-                {project.url && (
-                  <Github 
-                    className="size-4 opacity-50 group-hover:opacity-100 transition-all duration-300" 
-                    style={{ color: project.color }}
-                  />
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="hover:scale-110 transition-transform duration-200"
+                  >
+                    <Github 
+                      className="size-4 opacity-50 group-hover:opacity-100 transition-all duration-300" 
+                      style={{ color: project.color }}
+                    />
+                  </a>
                 )}
               </div>
               <p className="relative text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
