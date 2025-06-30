@@ -7,7 +7,8 @@ export function ProjectShowcase() {
   const projects = [
     {
       name: 'Shell Assistant',
-      description: 'Winning project of IEEE Hacksagon 2025, held in IIITM Gwalior, overall software category. A local application that interprets natural language commands and executes them on a Linux system using Ollama LLM.',
+      event: 'IEEE Hacksagon 2025, IIITM Gwalior - Overall Software Category Winner',
+      description: 'A local application that interprets natural language commands and executes them on a Linux/macos system.',
       url: 'https://github.com/psxuchiha/shell-assist',
       githubUrl: 'https://github.com/psxuchiha/shell-assist',
       icon: '󰆍',
@@ -23,7 +24,8 @@ export function ProjectShowcase() {
     },
     {
       name: 'YatraGPT',
-      description: 'An AI powered personalised travel agent that won 2nd prize in finova SoftLaunch Hackathon 2025.',
+      event: 'finova SoftLaunch Hackathon 2025 - 2nd Prize',
+      description: 'An AI powered personalised travel agent that provides intelligent travel recommendations and planning assistance.',
       url: 'https://github.com/vee1e/finova',
       githubUrl: 'https://github.com/vee1e/finova',
       icon: '󰒋',
@@ -50,7 +52,7 @@ export function ProjectShowcase() {
                 style={{ backgroundColor: project.color }}
               />
               <div className="relative flex items-start justify-between mb-2">
-                <div className="flex items-center gap-2">
+                <div className="flex items-start gap-2">
                   <span 
                     className="font-['JetBrainsMono_Nerd_Font'] text-xl transition-colors duration-300"
                     style={{ color: project.color }}
@@ -79,6 +81,11 @@ export function ProjectShowcase() {
                   </a>
                 )}
               </div>
+              {project.event && (
+                <p className="text-xs text-muted-foreground mb-2">
+                  {project.event}
+                </p>
+              )}
               <p className="relative text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
                 {project.description}
               </p>
