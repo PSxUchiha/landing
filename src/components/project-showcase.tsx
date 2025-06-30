@@ -7,9 +7,9 @@ export function ProjectShowcase() {
   const projects = [
     {
       name: 'Shell Assistant',
-      description: 'A local application that interprets natural language commands and executes them on a Linux system using Ollama LLM.',
-      url: 'https://github.com/PSxUchiha/shell-assistant',
-      githubUrl: 'https://github.com/PSxUchiha/shell-assistant',
+      description: 'Winning project of IEEE Hacksagon 2025, held in IIITM Gwalior, overall software category. A local application that interprets natural language commands and executes them on a Linux system using Ollama LLM.',
+      url: 'https://github.com/psxuchiha/shell-assist',
+      githubUrl: 'https://github.com/psxuchiha/shell-assist',
       icon: '󰆍',
       color: 'var(--mauve)',
     },
