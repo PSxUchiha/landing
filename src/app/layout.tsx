@@ -4,6 +4,7 @@ import { ViewTransitions } from "next-view-transitions";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Navbar } from "@/components/navbar";
 import Providers from "@/lib/provider/react-query";
+import { Analytics } from "@vercel/analytics/next";
 
 import "./globals.css";
 import "./fonts.css";
@@ -96,6 +97,7 @@ export default function RootLayout({
               <Footer />
             </Providers>
           </ThemeProvider>
+          <Analytics />
         </body>
       </html>
     </ViewTransitions>
