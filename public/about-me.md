@@ -1,5 +1,4 @@
-
-• **B.Tech student** in **Electronics and Communication** at **MIT Manipal** (2027)
+• **B.Tech student** in **Electronics and Communications Engg** at **MIT Manipal** (2027)
 
 • **Winner:** **IEEE Hacksagon 2025**, IIITM Gwalior - **Overall Software Category Winner**
 
@@ -7,4 +6,4 @@
 
 • Passionate about **development** and **collaboration**
 
-• For inquiries, please reach out via [**email**](mailto:priyanshusharma1803@outlook.com) 
+• For inquiries, please reach out via [**Email**](mailto:priyanshusharma1803@outlook.com) 
