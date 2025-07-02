@@ -3,10 +3,11 @@ import Container from "@/components/container";
 import { Metadata } from "next";
 import { Hero } from "@/components/hero";
 import type { WebPage, WithContext } from "schema-dts";
-import { Code, GitGraph, Info, User, School, Terminal, Mail, Briefcase } from "lucide-react";
+import { Code, GitGraph, Info } from "lucide-react";
 import { TextScroll } from "@/components/ui/text-scroll";
 import { TechStack } from "@/components/tech-stack";
 import { ProjectShowcase } from "@/components/project-showcase";
+import AboutMeSection from "@/components/about-me-section";
 
 import HeroImage from "@/assets/img/hero.jpg";
 import HeroProfile from "@/assets/img/profpic-animated.webp";
@@ -46,30 +47,7 @@ export default function Home() {
     <>
       <Container>
         <Hero img={HeroImage} profile={HeroProfile} />
-        <div className="w-full bg-background rounded-lg border border-border">
-          <h2 className="w-full flex items-center gap-3 text-muted-foreground px-5 py-3 border-b border-border">
-            <User className="size-4" />
-            <span className="text-sm font-mono">ABOUT-ME.md</span>
-          </h2>
-          <div className="px-5 py-3 space-y-2">
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <School className="size-4" />
-              <p>B.Tech student in Electronics and Communication at MIT Manipal (2027)</p>
-            </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Briefcase className="size-4" />
-              <p>Research Intern at RDCIS SAIL, Ranchi (May 2025 - June 2025)</p>
-            </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Terminal className="size-4" />
-              <p>Passionate about development and collaboration</p>
-            </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Mail className="size-4" />
-              <p>For inquiries, please reach out via <a href="mailto:priyanshusharma1803@outlook.com" className="underline underline-offset-2">email</a></p>
-            </div>
-          </div>
-        </div>
+        <AboutMeSection />
 
         <div className="w-full bg-background rounded-lg border border-border">
           <h2 className="w-full flex items-center gap-3 text-muted-foreground px-5 py-3 border-b border-border">

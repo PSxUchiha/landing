@@ -45,8 +45,8 @@ export function ProjectShowcase() {
     <div className="space-y-4 px-5 py-3">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {projects.map((project) => {
-          const content = (
-            <div className="relative h-full p-4 rounded-lg border border-border transition-all duration-300">
+          const cardContent = (
+            <>
               <div 
                 className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg"
                 style={{ backgroundColor: project.color }}
@@ -67,18 +67,19 @@ export function ProjectShowcase() {
                   </h3>
                 </div>
                 {project.githubUrl && (
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="hover:scale-110 transition-transform duration-200"
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      window.open(project.githubUrl, '_blank', 'noopener,noreferrer');
+                    }}
+                    className="hover:scale-110 transition-transform duration-200 bg-transparent border-none cursor-pointer p-0"
                   >
                     <Github 
                       className="size-4 opacity-50 group-hover:opacity-100 transition-all duration-300" 
                       style={{ color: project.color }}
                     />
-                  </a>
+                  </button>
                 )}
               </div>
               {project.event && (
@@ -89,28 +90,27 @@ export function ProjectShowcase() {
               <p className="relative text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
                 {project.description}
               </p>
-            </div>
+            </>
           );
 
-          if (project.url) {
-            return (
-              <a
-                key={project.name}
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block"
-              >
-                {content}
-              </a>
-            );
-          } else {
-            return (
-              <div key={project.name} className="group block">
-                {content}
-              </div>
-            );
-          }
+          return project.url ? (
+            <a
+              key={project.name}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block relative h-full p-4 rounded-lg border border-border transition-all duration-300"
+            >
+              {cardContent}
+            </a>
+          ) : (
+            <div
+              key={project.name}
+              className="group block relative h-full p-4 rounded-lg border border-border transition-all duration-300"
+            >
+              {cardContent}
+            </div>
+          );
         })}
       </div>
     </div>
