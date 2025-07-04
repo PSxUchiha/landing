@@ -43,19 +43,24 @@ export const metadata: Metadata = {
       default: "psxuchiha.",
       template: "%s | psxuchiha.",
     },
+    description: "B.Tech student in Electronics and Communications Engineering at MIT Manipal. Winner of IEEE Hacksagon 2025. Passionate about development and collaboration.",
+    url: "https://priyanshusharma.dev",
+    siteName: "Priyanshu Sharma - Portfolio",
     images: [
       {
         url: OgImage.src,
         width: OgImage.width,
         height: OgImage.height,
+        alt: "Priyanshu Sharma - Developer & Student Portfolio",
       },
     ],
-    description: "Where it all begins.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
+    title: "psxuchiha.",
+    description: "B.Tech student in Electronics and Communications Engineering at MIT Manipal. Winner of IEEE Hacksagon 2025. Passionate about development and collaboration.",
     site: "@PSxUchiha",
     creator: "@PSxUchiha",
     images: [
@@ -63,6 +68,7 @@ export const metadata: Metadata = {
         url: OgImage.src,
         width: OgImage.width,
         height: OgImage.height,
+        alt: "Priyanshu Sharma - Developer & Student Portfolio",
       },
     ],
   },
