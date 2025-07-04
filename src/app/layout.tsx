@@ -10,8 +10,6 @@ import "./globals.css";
 import "./fonts.css";
 import { Footer } from "@/components/footer";
 
-import OgImage from "./opengraph-image.png";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -48,9 +46,9 @@ export const metadata: Metadata = {
     siteName: "Priyanshu Sharma - Portfolio",
     images: [
       {
-        url: OgImage.src,
-        width: OgImage.width,
-        height: OgImage.height,
+        url: "/og-image.png",
+        width: 1536,
+        height: 1024,
         alt: "Priyanshu Sharma - Developer & Student Portfolio",
       },
     ],
@@ -65,9 +63,9 @@ export const metadata: Metadata = {
     creator: "@PSxUchiha",
     images: [
       {
-        url: OgImage.src,
-        width: OgImage.width,
-        height: OgImage.height,
+        url: "/twitter-image.png",
+        width: 1536,
+        height: 1024,
         alt: "Priyanshu Sharma - Developer & Student Portfolio",
       },
     ],
