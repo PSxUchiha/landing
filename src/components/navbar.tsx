@@ -1,5 +1,7 @@
 import ThemeToggleButton from "./ui/theme-toggle-button";
 import { Link } from "next-view-transitions";
+import { Button } from "./ui/button";
+import { GitHub } from "./logos/github";
 
 export interface FlatNavLinkProps {
   href: string;
@@ -34,13 +36,19 @@ export function Navbar() {
         >
           psxuchiha.
         </Link>
-        <div className="flex gap-5 items-center">
+        <div className="flex gap-3 items-center">
           {links.length > 0 &&
             links.map((link) => (
               <FlatNavLink key={link.href} href={link.href}>
                 {link.text}
               </FlatNavLink>
             ))}
+          <Button variant="ghost" size="icon" asChild>
+            <a href="https://github.com/PSxUchiha/landing" target="_blank" rel="noopener noreferrer">
+              <GitHub className="size-5" />
+              <span className="sr-only">View source code on GitHub</span>
+            </a>
+          </Button>
           <ThemeToggleButton variant="circle-blur" start="top-right" />
         </div>
       </nav>
